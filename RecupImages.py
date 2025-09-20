@@ -1,6 +1,4 @@
 import os
-import time
-import random
 import requests
 from PIL import Image, UnidentifiedImageError
 from io import BytesIO
@@ -11,14 +9,18 @@ import imagehash
 import sys
 import platform
 import gradio as gr
+from config import api_key, search_engine_id
+
+output_dir = "images/"
+taille_min = 800
+max_images = 5
+seuil_phash = 5
 
 print("Python executable :", sys.executable)
 print("Python version    :", sys.version)
 print("Platform          :", platform.platform())
 
 # --- Paramètres de recherche  ---
-api_key = "votre identifiant API"
-search_engine_id = "Identifiant navigateur"
 output_dir = "images/"
 taille_min = 800
 max_images = 5

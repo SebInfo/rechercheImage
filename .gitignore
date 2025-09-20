@@ -1,3 +1,4 @@
 images/
 haarcascades/
 .idea/
+/config.py
